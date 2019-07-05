@@ -1,0 +1,16 @@
+{
+  "name": "log-generator",
+  "version": "0.0.0",
+  "description": "",
+  "main": "log-generator.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Steen Kamby <stka@sunday.dk> (https://www.danskebank.dk)",
+  "license": "MIT",
+  "dependencies": {
+    "@sentry/node": "5.1.0",
+    "raven": "2.6.4"
+  }
+}

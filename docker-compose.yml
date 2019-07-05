@@ -23,7 +23,7 @@ x-defaults: &defaults
     SENTRY_POSTGRES_HOST: postgres
     SENTRY_EMAIL_HOST: smtp
   volumes:
-    - sentry-data:/var/lib/sentry/files
+    - "${VOLUME_SENTRY}:/var/lib/sentry/files"
 
 
 services:
@@ -43,7 +43,7 @@ services:
     restart: unless-stopped
     image: postgres:9.5
     volumes:
-      - sentry-postgres:/var/lib/postgresql/data
+      - "${VOLUME_SENTRY_POSTGRES}:/var/lib/postgresql/data"
 
   web:
     <<: *defaults
@@ -58,9 +58,3 @@ services:
     <<: *defaults
     command: run worker
 
-
-volumes:
-    sentry-data:
-      external: true
-    sentry-postgres:
-      external: true

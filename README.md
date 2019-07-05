@@ -1,5 +1,20 @@
 # Sentry On-Premise
 
+## Edited version (WIP)
+
+1. Create folders for volumes
+ * $HOME/volumes/vol-sentry-data
+ * $HOME/volumes/vol-sentry-postgres
+2. `docker-compose --verbose build` - Build and tag the Docker services
+3. `docker-compose run --rm web config generate-secret-key` - Generate a secret key.
+    Add it to `.env` as `SENTRY_SECRET_KEY`.
+4. `docker-compose run --rm web upgrade` - Build the database.
+    Use the interactive prompts to create a user account.
+5. `docker-compose up -d` - Lift all services (detached/background mode).
+6. Access your instance at `localhost:9000`!
+
+
+
 Official bootstrap for running your own [Sentry](https://sentry.io/) with [Docker](https://www.docker.com/).
 
 ## Requirements
