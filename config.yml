@@ -35,6 +35,8 @@
 # A new key can be generated with `$ sentry config generate-secret-key`
 # system.secret-key: 'changeme'
 
+system.url-prefix: 'http://localhost:9000'
+
 # The ``redis.clusters`` setting is used, unsurprisingly, to configure Redis
 # clusters. These clusters can be then referred to by name when configuring
 # backends such as the cache, digests, or TSDB backend.
