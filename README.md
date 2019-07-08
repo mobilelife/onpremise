@@ -27,14 +27,12 @@ Official bootstrap for running your own [Sentry](https://sentry.io/) with [Docke
 6. Access your instance at `localhost:9000`, when prompted for an admin email, give a real email (if you want to test errors).
 
 ### Generate an error
-
-From the log-generator dir, run `npm i` and the `node log-generator` to post an error to your Sentry.
 1. In Sentry, click 'Projects' and 'Add new ...' --> 'Project' (or navigate to http://localhost:9000/organizations/sentry/projects/new/)
 2. Choose NodeJS, for the example call the project 'Nodetest' and create it.
 3. Select your project, go to 'Settings' --> 'Client Keys (DSN)' (or navigate to http://localhost:9000/settings/sentry/projects/nodetest/keys/)
 4. Copy the 'DSN' key and edit /log-generator/log-generator.js to use this key.
 5. In the terminal, go to /log-generator and run 'npm i'
-6. Run 'node log-generator.js' to trigger an error.
+6. Run 'node log-generator.js' to trigger an error and log it to Sentry.
 
 You can check out the error in Sentry, or check your email.
 
