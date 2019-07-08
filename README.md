@@ -41,7 +41,7 @@ You should have an email saying something like:
 Exception
 
 ReferenceError: iLikeToFail is not defined
-  File "/Users/steenkamby/sunday/onpremise/log-generator/log-generator.js", line 6, in Object.<anonymous>
+  File "/Users/:your-user:/sunday/onpremise/log-generator/log-generator.js", line 6, in Object.<anonymous>
     iLikeToFail();
 ...
 (2 additional frame(s) were not displayed)
